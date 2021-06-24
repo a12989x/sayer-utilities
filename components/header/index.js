@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import styles from '@/styles/components/header/header.module.scss';
 
-import Logo from '@/public/logo.svg';
+import Logo from '@/public/assets/logo.min.svg';
 import NavItem from './NavItem';
 
 const Header = () => {
