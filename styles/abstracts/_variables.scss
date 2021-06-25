@@ -1,0 +1,20 @@
+.light-mode {
+	--text-color: #161616;
+	--light-gray-color: #777c90;
+	--dark-gray-color: #2b2b2b;
+	--background-color: #fefefefe;
+}
+
+.dark-mode {
+	--text-color: #fefefe;
+	--light-gray-color: #f5f5f5;
+	--dark-gray-color: #212121;
+	--background-color: #161616;
+}
+
+$text-color: var(--text-color);
+$light-gray-color: var(--light-gray-color);
+$dark-gray-color: var(--dark-gray-color);
+$background-color: var(--background-color);
+
+$accent-color: #805ad5;
