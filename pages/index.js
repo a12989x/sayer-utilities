@@ -1,4 +1,4 @@
-import Check from '@/components/check';
+import ToolsList from '@/components/ToolsList';
 
 /**
  * Home: Component
@@ -6,9 +6,9 @@ import Check from '@/components/check';
  */
 const Home = () => {
 	return (
-		<div>
-			<Check />
-		</div>
+		<main>
+			<ToolsList />
+		</main>
 	);
 };
 
