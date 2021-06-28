@@ -1,0 +1,12 @@
+.toggleModeButton {
+	padding: 0;
+	height: 45px;
+	width: 45px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--light-gray-color);
+	border: none;
+	border-radius: 0.4375rem;
+	cursor: pointer;
+}
