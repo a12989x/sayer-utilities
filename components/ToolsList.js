@@ -12,7 +12,7 @@ const ToolsList = () => {
 					<Link href='/check'>Conocer ganancia</Link>
 				</li>
 				<li>
-					<Link href='/check'>Sacar precio</Link>
+					<Link href='/obtain-price'>Obtener precio</Link> (Pendiente)
 				</li>
 			</ul>
 		</section>
