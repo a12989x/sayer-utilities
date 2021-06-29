@@ -6,8 +6,8 @@ const Navbar = () => {
 	return (
 		<nav>
 			<ul className={styles.navbar__list}>
-				<NavItem href='/'>Home</NavItem>
-				<NavItem href='/about'>About</NavItem>
+				<NavItem href='/'>Inicio</NavItem>
+				<NavItem href='/about'>Acerca</NavItem>
 			</ul>
 		</nav>
 	);
