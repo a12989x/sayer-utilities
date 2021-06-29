@@ -7,13 +7,13 @@ import Item from './Item';
 
 const Check = () => {
 	const [values, handleChange] = useForm({ cost: '', sale: '' });
-	const [gain, setGain] = useState({ gain: '', percent: '' });
+	const [gain, setGain] = useState({ currency: '', percent: '' });
 	const [isPositive, setIsPositive] = useState(undefined);
 
 	useEffect(() => {
 		const getGain = () => {
 			const { cost, sale } = values;
-			const gain = cost && sale ? sale - cost : '';
+			const currency = cost && sale ? sale - cost : '';
 			const percent = cost && sale ? ((sale - cost) / sale) * 100 : '';
 
 			if (!sale || !cost) setIsPositive(undefined);
@@ -21,7 +21,7 @@ const Check = () => {
 			else if (+sale > +cost) setIsPositive(true);
 			else if (+sale === +cost) setIsPositive(undefined);
 
-			setGain({ gain, percent });
+			setGain({ currency, percent });
 		};
 
 		getGain();
@@ -33,12 +33,12 @@ const Check = () => {
 				id='cost'
 				value={values.cost}
 				onChange={handleChange}
-				label='Compra'
+				label='Costo'
 			/>
 			<Item
-				id='gain'
-				value={gain.gain}
-				label='Ganancia'
+				id='currency'
+				value={gain.currency}
+				label='Pesos'
 				valueState={isPositive}
 				readOnly
 			/>
