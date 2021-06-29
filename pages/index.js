@@ -7,6 +7,9 @@ import ToolsList from '@/components/ToolsList';
 const Home = () => {
 	return (
 		<main>
+			<h1>Inicio</h1>
+			<p>Aplicacion web de todas las herramientas para Sayer- La Via.</p>
+
 			<ToolsList />
 		</main>
 	);
