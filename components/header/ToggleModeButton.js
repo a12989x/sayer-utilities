@@ -17,7 +17,7 @@ const ToggleModeButton = () => {
 
 	return (
 		<button className={styles.toggleModeButton} onClick={toggleColorMode}>
-			{theme === 'light' ? (
+			{theme === 'light' || resolvedTheme === 'light' ? (
 				<Image src={MoonIcon} alt='sun icon' />
 			) : (
 				<Image src={SunIcon} alt='sun icon' />
