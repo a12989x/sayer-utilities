@@ -9,7 +9,7 @@ const ToolsList = () => {
 
 			<ul className={styles.toolsList__list}>
 				<li>
-					<Link href='/check'>Conocer ganancia</Link>
+					<Link href='/know-profit'>Conocer ganancia</Link>
 				</li>
 				<li>
 					<Link href='/obtain-price'>Obtener precio</Link> (Pendiente)

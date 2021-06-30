@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
 
-import styles from '@/styles/components/check.module.scss';
+import styles from '@/styles/components/know-profit-table.module.scss';
 
 import useForm from 'hooks/useForm';
 import Item from './Item';
 
-const Check = () => {
+const KnowProfitTable = () => {
 	const [values, handleChange] = useForm({ cost: '', sale: '' });
-	const [gain, setGain] = useState({ currency: '', percent: '' });
+	const [profit, setProfit] = useState({ currency: '', percent: '' });
 	const [isPositive, setIsPositive] = useState(undefined);
 
 	useEffect(() => {
-		const getGain = () => {
+		const getProfit = () => {
 			const { cost, sale } = values;
 			const currency = cost && sale ? sale - cost : '';
 			const percent = cost && sale ? ((sale - cost) / sale) * 100 : '';
@@ -21,10 +21,10 @@ const Check = () => {
 			else if (+sale > +cost) setIsPositive(true);
 			else if (+sale === +cost) setIsPositive(undefined);
 
-			setGain({ currency, percent });
+			setProfit({ currency, percent });
 		};
 
-		getGain();
+		getProfit();
 	}, [values]);
 
 	return (
@@ -37,7 +37,7 @@ const Check = () => {
 			/>
 			<Item
 				id='currency'
-				value={gain.currency}
+				value={profit.currency}
 				label='Pesos'
 				valueState={isPositive}
 				readOnly
@@ -51,7 +51,7 @@ const Check = () => {
 			/>
 			<Item
 				id='percent'
-				value={gain.percent}
+				value={profit.percent}
 				label='Porcentaje'
 				valueState={isPositive}
 				readOnly
@@ -60,4 +60,4 @@ const Check = () => {
 	);
 };
 
-export default Check;
+export default KnowProfitTable;
