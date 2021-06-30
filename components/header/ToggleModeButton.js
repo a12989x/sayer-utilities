@@ -7,11 +7,12 @@ import SunIcon from '@/public/assets/sun.min.svg';
 import MoonIcon from '@/public/assets/moon.min.svg';
 
 const ToggleModeButton = () => {
-	const { theme, setTheme } = useTheme();
+	const { theme, setTheme, resolvedTheme } = useTheme();
 
 	const toggleColorMode = () => {
-		if (theme === 'light') setTheme('dark');
-		else if (theme === 'dark') setTheme('light');
+		if (theme === 'light' || resolvedTheme === 'light') setTheme('dark');
+		else if (theme === 'dark' || resolvedTheme === 'dark')
+			setTheme('light');
 	};
 
 	return (
