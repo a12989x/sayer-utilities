@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import styles from '@/styles/components/know-profit-table.module.scss';
+import styles from '@/styles/components/tables.module.scss';
 
 import useForm from 'hooks/useForm';
 import Item from './Item';
