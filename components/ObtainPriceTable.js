@@ -4,7 +4,9 @@ import styles from '@/styles/components/tables.module.scss';
 
 import useForm from 'hooks/useForm';
 
-import Item from './Item';
+import InputItem from './InputItem';
+import ResultItem from './table/ResultItem';
+import formatter from 'lib/formatter';
 
 const ObtainPriceTable = () => {
 	const [values, handleChange] = useForm({ cost: '', percent: 30 });
@@ -24,21 +26,23 @@ const ObtainPriceTable = () => {
 
 	return (
 		<section className={styles.section}>
-			<Item
-				id='cost'
-				value={values.cost}
-				onChange={handleChange}
-				label='Costo'
-			/>
+			<div className={styles.section__operation}>
+				<InputItem
+					id='cost'
+					value={values.cost}
+					onChange={handleChange}
+				/>
 
-			<Item id='price' value={finalPrice} label='Precio Final' readOnly />
+				<span>+</span>
 
-			<Item
-				id='percent'
-				value={values.percent}
-				onChange={handleChange}
-				label='Porcentaje'
-			/>
+				<InputItem
+					id='percent'
+					value={values.percent}
+					onChange={handleChange}
+				/>
+			</div>
+
+			<ResultItem value={formatter.format(finalPrice)} />
 		</section>
 	);
 };
