@@ -1,13 +1,24 @@
+@use '../../abstracts/breakpoints' as *;
+
 .resultItem {
 	padding: 0.3125rem 0.4375rem;
-	width: max-content;
+	min-width: 7rem;
+	width: 100%;
 	display: grid;
 	grid-template: auto / auto 1fr;
-	text-align: center;
 	align-items: center;
 	column-gap: 0.5rem;
 	font-size: 1.25rem;
+	text-align: center;
 	background-color: transparent;
 	border: 1px solid var(--border-color);
 	border-radius: 7px;
+
+	@include media('<=474px') {
+		max-width: 7rem;
+	}
+
+	&__positive {
+		border-color: var(--success-color);
+	}
 }
