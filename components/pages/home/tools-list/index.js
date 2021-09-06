@@ -2,7 +2,6 @@ import { useTheme } from 'next-themes';
 
 import styles from '@/styles/components/tools-list.module.scss';
 
-import Link from '../../../Link';
 import ToolItem from './ToolItem';
 
 import ProfitDarkSVG from '@/public/assets/profit-dark.min.svg';
@@ -11,7 +10,7 @@ import PriceDarkSVG from '@/public/assets/price-dark.min.svg';
 import PriceLightSVG from '@/public/assets/price-light.min.svg';
 
 const ToolsList = () => {
-	const { theme, setTheme, resolvedTheme } = useTheme();
+	const { theme, resolvedTheme } = useTheme();
 
 	return (
 		<section className={styles.toolsList}>
