@@ -1,0 +1,9 @@
+@use '../abstracts/breakpoints' as *;
+
+.home {
+	&__title {
+		@include media('<=812px') {
+			text-align: center;
+		}
+	}
+}
