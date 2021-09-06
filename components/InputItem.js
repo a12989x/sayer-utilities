@@ -1,13 +1,6 @@
 import styles from '@/styles/components/input-item.module.scss';
 
-const InputItem = ({
-	id,
-	label,
-	value,
-	readOnly = false,
-	valueState,
-	...props
-}) => {
+const InputItem = ({ id, value, ...props }) => {
 	return (
 		<div className={styles.inputItem}>
 			<span>$</span>
