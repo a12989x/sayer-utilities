@@ -7,8 +7,8 @@ import InputItem from '../../InputItem';
 import ResultItem from '@/components/table/ResultItem';
 
 const KnowProfitTable = () => {
-	const [values, handleChange] = useForm({ cost: '0', sale: '0' });
-	const [profit, setProfit] = useState({ currency: '0', percent: '0' });
+	const [values, handleChange] = useForm({ cost: '', sale: '' });
+	const [profit, setProfit] = useState({ currency: '', percent: '' });
 	const [isPositive, setIsPositive] = useState(null);
 
 	useEffect(() => {
@@ -46,8 +46,18 @@ const KnowProfitTable = () => {
 			</div>
 
 			<div className={styles.section__result}>
-				<ResultItem symbol='+' value={`$ ${profit.currency}`} />
-				<ResultItem symbol='+' value={`${profit.percent} %`} />
+				<ResultItem
+					symbol='+'
+					value={`$ ${profit.currency || 0}`}
+					isPositive={isPositive}
+				/>
+				<ResultItem
+					symbol='+'
+					value={`${
+						profit.percent.toString().substring(0, 5) || 0
+					} %`}
+					isPositive={isPositive}
+				/>
 			</div>
 		</section>
 	);
