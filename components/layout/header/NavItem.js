@@ -1,6 +1,6 @@
 import Link from '@/components/Link';
 
-import styles from '@/styles/components/header/nav-item.module.scss';
+import styles from '@/styles/components/layout/header/nav-item.module.scss';
 
 const NavItem = ({ href, children }) => {
 	return (

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 
-import styles from '@/styles/components/header/toggle-mode-button.module.scss';
+import styles from '@/styles/components/layout/header/toggle-mode-button.module.scss';
 
 import SunIcon from '@/public/assets/sun.min.svg';
 import MoonIcon from '@/public/assets/moon.min.svg';

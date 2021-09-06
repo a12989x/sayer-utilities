@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import Link from '../Link';
+import Link from '../../Link';
 
 import LogoIcon from '@/public/assets/logo.min.svg';
 
