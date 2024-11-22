@@ -93,6 +93,7 @@
   --error-10: var(--red-10);
   --error-11: var(--red-11);
   --error-12: var(--red-12);
+
   .dark {
     --primary-1: 260 8.11% 7.25%;
     --primary-2: 260 5.66% 10.4%;
