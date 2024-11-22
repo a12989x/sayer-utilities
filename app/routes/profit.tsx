@@ -38,7 +38,7 @@ const Profit = () => {
           <Label htmlFor='sale'>Precio venta</Label>
 
           <div className='relative'>
-            <div className='text-grey-placeholder-text absolute left-0 top-0 flex size-9 select-none items-center justify-center'>
+            <div className='absolute left-0 top-0 flex size-9 select-none items-center justify-center text-grey-placeholder-text'>
               <span>&#36;</span>
             </div>
             <Input
@@ -56,7 +56,7 @@ const Profit = () => {
           <Label htmlFor='cost'>Precio costo</Label>
 
           <div className='relative'>
-            <div className='text-grey-placeholder-text absolute right-0 top-0 flex size-9 select-none items-center justify-center'>
+            <div className='absolute right-0 top-0 flex size-9 select-none items-center justify-center text-grey-placeholder-text'>
               <span>&#37;</span>
             </div>
             <Input
@@ -76,7 +76,7 @@ const Profit = () => {
           <Label>Ganancia en pesos</Label>
 
           <div className='relative'>
-            <div className='text-grey-placeholder-text absolute left-0 top-0 flex size-9 select-none items-center justify-center'>
+            <div className='absolute left-0 top-0 flex size-9 select-none items-center justify-center text-grey-placeholder-text'>
               <span>&#36;</span>
             </div>
             <Input
@@ -108,7 +108,7 @@ const Profit = () => {
                     : result.percent.toFixed(2)
                 }
               />
-              <div className='text-grey-placeholder-text absolute right-0 top-0 flex size-9 select-none items-center justify-center'>
+              <div className='absolute right-0 top-0 flex size-9 select-none items-center justify-center text-grey-placeholder-text'>
                 <span>&#37;</span>
               </div>
             </div>

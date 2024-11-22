@@ -37,7 +37,7 @@ const Price = () => {
           <Label htmlFor='price'>Precio</Label>
 
           <div className='relative'>
-            <div className='text-grey-placeholder-text absolute left-0 top-0 flex size-9 select-none items-center justify-center'>
+            <div className='absolute left-0 top-0 flex size-9 select-none items-center justify-center text-grey-placeholder-text'>
               <span>&#36;</span>
             </div>
             <Input
@@ -55,7 +55,7 @@ const Price = () => {
           <Label htmlFor='percent'>Margen de ganancia</Label>
 
           <div className='relative'>
-            <div className='text-grey-placeholder-text absolute right-0 top-0 flex size-9 select-none items-center justify-center'>
+            <div className='absolute right-0 top-0 flex size-9 select-none items-center justify-center text-grey-placeholder-text'>
               <span>&#37;</span>
             </div>
             <Input
@@ -75,7 +75,7 @@ const Price = () => {
           <Label>Resultado</Label>
 
           <div className='relative'>
-            <div className='text-grey-placeholder-text absolute left-0 top-0 flex size-9 select-none items-center justify-center'>
+            <div className='absolute left-0 top-0 flex size-9 select-none items-center justify-center text-grey-placeholder-text'>
               <span>&#36;</span>
             </div>
             <Input
