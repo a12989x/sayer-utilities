@@ -7,7 +7,8 @@ export const useForm = <T extends FormValues>(initialValues: T) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value, type } = e.currentTarget;
-    const newValue = type === 'number' ? Number(value) : value;
+    const newValue =
+      type === 'number' ? (value === '' ? '' : Number(value)) : value;
     setValues({ ...values, [id]: newValue });
   };
 
