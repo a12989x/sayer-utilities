@@ -8,13 +8,13 @@ import { useForm } from '~/hooks/useForm';
 const Price = () => {
   const [result, setResult] = useState(0);
   const [values, handleChange] = useForm({
-    price: 0,
+    price: 100,
     percent: 40,
   });
 
   useEffect(() => {
     const { price, percent } = values;
-    const result = price * (percent / 100);
+    const result = price * (percent / 100) + price;
     setResult(result);
   }, [values]);
 
@@ -25,7 +25,7 @@ const Price = () => {
   return (
     <div className='space-y-6 p-4'>
       <div className='space-y-2'>
-        <h1 className='text-2xl font-bold'>Obtener Precio</h1>
+        <h1 className='text-2xl font-bold'>Obtener precio</h1>
         <p className='text-grey-text'>
           Obten el precio final de un producto dependiendo del margen de
           ganancia que deseas.
@@ -38,7 +38,7 @@ const Price = () => {
 
           <div className='relative'>
             <div className='text-grey-placeholder-text absolute left-0 top-0 flex size-9 select-none items-center justify-center'>
-              <span>$</span>
+              <span>&#36;</span>
             </div>
             <Input
               className='appearance-[textfield] pl-9'
@@ -52,11 +52,11 @@ const Price = () => {
           </div>
         </div>
         <div className='space-y-2'>
-          <Label htmlFor='percent'>Margen de Ganancia</Label>
+          <Label htmlFor='percent'>Margen de ganancia</Label>
 
           <div className='relative'>
             <div className='text-grey-placeholder-text absolute right-0 top-0 flex size-9 select-none items-center justify-center'>
-              <span>%</span>
+              <span>&#37;</span>
             </div>
             <Input
               className='pr-9'
@@ -76,7 +76,7 @@ const Price = () => {
 
           <div className='relative'>
             <div className='text-grey-placeholder-text absolute left-0 top-0 flex size-9 select-none items-center justify-center'>
-              <span>=</span>
+              <span>&#36;</span>
             </div>
             <Input
               readOnly
