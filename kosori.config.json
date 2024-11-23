@@ -1,0 +1,14 @@
+{
+  "$schema": "https://kosori.codingcodax.dev/schema.json",
+  "tailwind": {
+    "config": "tailwind.config.ts",
+    "css": "app/tailwind.css"
+  },
+  "aliases": {
+    "components": "~/components",
+    "utils": "~/utils",
+    "ui": "~/components/ui",
+    "hooks": "~/hooks"
+  },
+  "project": "next-app-src"
+}
