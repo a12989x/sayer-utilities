@@ -1,4 +1,3 @@
-import type { MetaFunction } from '@remix-run/node';
 import { Link } from '@remix-run/react';
 
 import {
@@ -8,13 +7,6 @@ import {
   CardTitle,
 } from '~/components/ui/card';
 import { tools } from '~/config/tools';
-
-export const meta: MetaFunction = () => {
-  return [
-    { title: 'Sayer' },
-    { name: 'description', content: 'Herramientas para Sayer - La Via' },
-  ];
-};
 
 const Home = () => {
   return (
