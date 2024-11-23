@@ -1,4 +1,4 @@
-import type { ActionFunction, ActionFunctionArgs } from '@remix-run/node';
+import type { ActionFunctionArgs } from '@remix-run/node';
 import { Form, useActionData, useNavigation } from '@remix-run/react';
 import {
   GalleryHorizontalEndIcon,
@@ -64,7 +64,7 @@ const Palette = () => {
         <div className='space-y-2'>
           <Label htmlFor='code'>Codigo</Label>
           <div className='relative'>
-            <div className='text-grey-placeholder-text absolute left-0 top-0 flex size-9 select-none items-center justify-center'>
+            <div className='absolute left-0 top-0 flex size-9 select-none items-center justify-center text-grey-placeholder-text'>
               <HashIcon className='size-4' />
             </div>
             <Input
@@ -81,7 +81,7 @@ const Palette = () => {
           <Label htmlFor='brand'>Base</Label>
           <Select name='brand'>
             <SelectTrigger className='relative [&_span]:pl-6' id='brand'>
-              <div className='text-grey-placeholder-text absolute left-0 top-0 flex size-9 select-none items-center justify-center'>
+              <div className='absolute left-0 top-0 flex size-9 select-none items-center justify-center text-grey-placeholder-text'>
                 <GalleryHorizontalEndIcon className='size-4' />
               </div>
               <SelectValue placeholder='Selecciona una base' />
@@ -101,7 +101,7 @@ const Palette = () => {
           <Label htmlFor='size'>Tamaño</Label>
           <Select name='size'>
             <SelectTrigger className='relative [&_span]:pl-6' id='size'>
-              <div className='text-grey-placeholder-text absolute left-0 top-0 flex size-9 select-none items-center justify-center'>
+              <div className='absolute left-0 top-0 flex size-9 select-none items-center justify-center text-grey-placeholder-text'>
                 <RulerIcon className='size-4' />
               </div>
               <SelectValue placeholder='Selecciona un tamaño' />

@@ -35,7 +35,7 @@ const selectStyles = tv({
       'focus:ring-4 focus:ring-grey-focus-ring',
       'hover:border-grey-border-hover',
       'disabled:cursor-not-allowed disabled:bg-grey-bg disabled:text-grey-solid',
-      '[&>span]:line-clamp-1'
+      '[&>span]:line-clamp-1',
     ),
     triggerIcon: 'size-4 fill-grey-text',
     content: clsx(
@@ -45,13 +45,13 @@ const selectStyles = tv({
       'data-[side=bottom]:slide-in-from-top-2',
       'data-[side=left]:slide-in-from-right-2',
       'data-[side=right]:slide-in-from-left-2',
-      'data-[side=top]:slide-in-from-bottom-2'
+      'data-[side=top]:slide-in-from-bottom-2',
     ),
     viewport: 'p-1',
     item: clsx(
       'relative flex w-full cursor-pointer select-none items-center rounded-md py-1.5 pl-8 pr-2 text-sm outline-none transition-colors duration-200',
       'focus:bg-primary-bg-hover',
-      'data-[disabled]:cursor-not-allowed data-[disabled]:text-grey-solid'
+      'data-[disabled]:cursor-not-allowed data-[disabled]:text-grey-solid',
     ),
     itemIndicator: 'absolute left-2 flex items-center justify-center',
     itemIcon: 'size-4',
@@ -68,7 +68,7 @@ const selectStyles = tv({
           'data-[side=bottom]:translate-y-1',
           'data-[side=left]:-translate-x-1',
           'data-[side=right]:translate-x-1',
-          'data-[side=top]:-translate-y-1'
+          'data-[side=top]:-translate-y-1',
         ),
         viewport:
           'h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]',
@@ -133,7 +133,7 @@ export const SelectTrigger = forwardRef<SelectTriggerRef, SelectTriggerProps>(
         <CaretSortIcon className={triggerIcon()} />
       </Icon>
     </Trigger>
-  )
+  ),
 );
 
 SelectTrigger.displayName = Trigger.displayName;
@@ -176,7 +176,7 @@ export const SelectContent = forwardRef<SelectContentRef, SelectContentProps>(
         <SelectScrollDownButton />
       </Content>
     </Portal>
-  )
+  ),
 );
 
 SelectContent.displayName = Content.displayName;
@@ -203,7 +203,7 @@ export const SelectItem = forwardRef<SelectItemRef, SelectItemProps>(
 
       <ItemText>{children}</ItemText>
     </Item>
-  )
+  ),
 );
 
 SelectItem.displayName = Item.displayName;
@@ -290,7 +290,7 @@ type SelectLabelProps = React.ComponentPropsWithoutRef<typeof Label>;
 export const SelectLabel = forwardRef<SelectLabelRef, SelectLabelProps>(
   ({ className, ...props }, ref) => (
     <Label ref={ref} className={label({ className })} {...props} />
-  )
+  ),
 );
 
 SelectLabel.displayName = Label.displayName;
