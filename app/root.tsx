@@ -9,6 +9,8 @@ import {
 
 import './tailwind.css';
 
+import { MobileMenu } from './components/MobileMenu';
+
 export const links: LinksFunction = () => [
   { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
   {
@@ -33,6 +35,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
       <body>
         {children}
+        <MobileMenu />
         <ScrollRestoration />
         <Scripts />
       </body>
