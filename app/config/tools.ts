@@ -4,7 +4,7 @@ export const tools = [
   {
     icon: SwatchBookIcon,
     url: '/palette',
-    title: 'Sayer Palette',
+    title: 'Palette',
     description: 'Conoce la formula de un color en el abanico de colores.',
   },
   {
